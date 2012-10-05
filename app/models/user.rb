@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
   attr_accessible :username, :email
-  validates_presence_of :username, :email
+  validates :username, :email, presence: true
   has_many :entries
 end
