@@ -40,6 +40,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
+    puts params.inspect
     @entry = Entry.new(params[:entry])
 
     respond_to do |format|
